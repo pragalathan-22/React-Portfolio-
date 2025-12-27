@@ -107,17 +107,17 @@ Passionate about writing clean, maintainable code and continuously learning mode
               {[
                 {
                   icon: Github,
-                  href: "https://github.com/",
+                  href: "https://github.com/pragalathan-22",
                   label: "GitHub",
                 },
                 {
                   icon: Linkedin,
-                  href: "https://linkedin.com/",
+                  href: "http://www.linkedin.com/in/baktha-pragalathan-100350287",
                   label: "LinkedIn",
                 },
                 {
                   icon: Mail,
-                  href: "mailto:john@example.com",
+                  href: "bakthapragalathan22@gmail.com",
                   label: "Email",
                 },
               ].map(({ icon: Icon, href, label }) => (
@@ -136,18 +136,19 @@ Passionate about writing clean, maintainable code and continuously learning mode
             </motion.div>
 
             {/* RESUME BUTTON */}
-            <motion.a
-              href="/resume.pdf"
-              download
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.2 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block px-8 py-3 bg-linear-to-r from-purple-500 to-pink-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-purple-500/50"
-            >
-              Download Resume
-            </motion.a>
+<motion.a
+  href="/BakthapragalathanResume.pdf"
+  download="BakthapragalathanResume.pdf"
+  initial={{ opacity: 0, y: 20 }}
+  animate={isVisible ? { opacity: 1, y: 0 } : {}}
+  transition={{ delay: 1.2 }}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="inline-block px-8 py-3 bg-linear-to-r from-purple-500 to-pink-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-purple-500/50"
+>
+  Download Resume
+</motion.a>
+
           </motion.div>
         </div>
       </div>

@@ -4,54 +4,79 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projectsData = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include shopping cart, payment integration, and admin dashboard.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    image: '🛒',
-    github: '#',
-    demo: '#',
+    title: "Home Service Application",
+    description:
+      "On-demand home service mobile application enabling users to book services such as electrical, plumbing, and maintenance. Includes real-time booking, service status tracking, and secure authentication.",
+    technologies: ["React Native", "Node.js", "Firebase"],
+    image: "🏠",
+    github: "https://github.com/pragalathan-22/Home-Service.git",
+    demo: "#",
   },
   {
-    title: 'AI Chat Application',
-    description: 'Real-time chat application with AI-powered responses using OpenAI API. Includes user authentication and message history.',
-    technologies: ['React', 'Socket.io', 'OpenAI', 'PostgreSQL'],
-    image: '💬',
-    github: '#',
-    demo: '#',
+    title: "Saloon Booking Application",
+    description:
+      "Mobile booking platform for saloons allowing users to schedule appointments, select services, and manage bookings. Includes admin and user roles with real-time updates.",
+    technologies: ["React Native", "Node.js", "Firebase"],
+    image: "💇‍♂️",
+    github: "https://github.com/pragalathan-22/Saloon-Booking.git",
+    demo: "#",
   },
   {
-    title: 'Task Management System',
-    description: 'Collaborative task management tool with drag-and-drop interface, team collaboration features, and real-time updates.',
-    technologies: ['React', 'Firebase', 'Tailwind CSS', 'React DnD'],
-    image: '✅',
-    github: '#',
-    demo: '#',
+    title: "Cooper Build Application",
+    description:
+      "Cross-platform web and mobile application developed for construction management, featuring project tracking, user management, and responsive dashboards.",
+    technologies: ["Next.js", "React Native", "Web & Mobile"],
+    image: "🏗️",
+    github: "https://github.com/pragalathan-22/Build.git",
+    demo: "#",
   },
   {
-    title: 'Weather Dashboard',
-    description: 'Interactive weather dashboard with maps, forecasts, and historical data visualization using various weather APIs.',
-    technologies: ['React', 'Chart.js', 'Weather API', 'Mapbox'],
-    image: '🌤️',
-    github: '#',
-    demo: '#',
+    title: "Recipe Application",
+    description:
+      "Full-stack recipe management application supporting web and mobile platforms. Users can browse, add, and manage recipes with secure API integration.",
+    technologies: ["Python", "Django REST Framework", "React Native", "Web & Mobile"],
+    image: "🍲",
+    github: "https://github.com/pragalathan-22/Racepie_frontend.git",
+    demo: "#",
   },
   {
-    title: 'Portfolio Generator',
-    description: 'SaaS platform for creating developer portfolios with customizable templates and one-click deployment.',
-    technologies: ['Next.js', 'Tailwind CSS', 'Vercel', 'Supabase'],
-    image: '🎨',
-    github: '#',
-    demo: '#',
+    title: "IoT Door Unlock System (Password-Based)",
+    description:
+      "IoT-based door unlocking system using a password authentication mechanism with LCD display. Integrated hardware with backend logic for secure access control.",
+    technologies: ["C++", "Arduino", "ESP32", "IoT"],
+    image: "🔐",
+    github: "https://github.com/pragalathan-22/Multiple-Solenoid.git",
+    demo: "#",
   },
   {
-    title: 'Fitness Tracker',
-    description: 'Mobile-responsive fitness tracking app with workout plans, progress charts, and social sharing features.',
-    technologies: ['React', 'Express', 'MongoDB', 'Chart.js'],
-    image: '💪',
-    github: '#',
-    demo: '#',
+    title: "Fingerprint Door Unlock System",
+    description:
+      "Biometric-based door access system utilizing fingerprint authentication for enhanced security. Implemented hardware-level integration and real-time validation.",
+    technologies: ["C++", "Arduino", "Fingerprint Sensor", "IoT"],
+    image: "🆔",
+    github: "https://github.com/pragalathan-22/Sodium-lock.git",
+    demo: "#",
+  },
+    {
+    title: "CRM System with WhatsApp Meta API",
+    description:
+      "Customer Relationship Management (CRM) system built using the MERN stack with WhatsApp Meta API integration for automated messaging, contact management, and message status tracking.",
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "WhatsApp Meta API"],
+    image: "📊",
+    github: "https://github.com/pragalathan-22/CRM_Application.git",
+    demo: "#",
+  },
+  {
+    title: "HRM System",
+    description:
+      "Human Resource Management (HRM) application with employee management, attendance tracking, and role-based access, utilizing Redux for global state management.",
+    technologies: ["React", "Redux Toolkit", "Node.js", "MongoDB"],
+    image: "👥",
+    github: "https://github.com/pragalathan-22/HRM-Redux.git",
+    demo: "#",
   },
 ];
+
 
 export function Projects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -148,7 +173,7 @@ export function Projects() {
                         <Github size={18} />
                         <span>Code</span>
                       </motion.a>
-                      <motion.a
+                      {/* <motion.a
                         href={project.demo}
                         whileHover={{ scale: 1.1, rotate: -5 }}
                         whileTap={{ scale: 0.9 }}
@@ -156,7 +181,7 @@ export function Projects() {
                       >
                         <ExternalLink size={18} />
                         <span>Demo</span>
-                      </motion.a>
+                      </motion.a> */}
                     </div>
                   </div>
 

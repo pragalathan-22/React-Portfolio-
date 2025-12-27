@@ -4,8 +4,8 @@ import { Award, ExternalLink, Calendar } from 'lucide-react';
 
 const certificatesData = [
   {
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
+    title: 'Python Django Developer',
+    issuer: 'Softlogic(SLA)',
     date: 'December 2023',
     credentialId: 'AWS-123456789',
     link: '#',
@@ -18,8 +18,8 @@ const certificatesData = [
     link: '#',
   },
   {
-    title: 'Meta Front-End Developer Professional',
-    issuer: 'Meta',
+    title: 'Full-stack Developer Professional',
+    issuer: 'SLA',
     date: 'August 2023',
     credentialId: 'META-456789123',
     link: '#',
@@ -97,11 +97,11 @@ export function Certificates() {
                     <span>{cert.date}</span>
                   </div>
 
-                  <p className="text-sm text-gray-500 mb-4">
+                  {/* <p className="text-sm text-gray-500 mb-4">
                     ID: {cert.credentialId}
-                  </p>
+                  </p> */}
 
-                  <motion.a
+                  {/* <motion.a
                     href={cert.link}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -109,7 +109,7 @@ export function Certificates() {
                   >
                     <span>View Certificate</span>
                     <ExternalLink size={14} />
-                  </motion.a>
+                  </motion.a> */}
                 </div>
 
                 {/* Shine effect on hover */}
