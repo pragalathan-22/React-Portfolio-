@@ -42,7 +42,7 @@ export function ProfileSummary() {
               <div className="w-72 h-72 rounded-full bg-linear-to-br from-purple-500 to-pink-500 p-1">
                 <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
                   {/* Replace emoji with image if needed */}
-                  <span className="text-8xl">👨‍💻</span>
+                  <img src="/mountains/Author.png" alt="Baktha Pragalathan" className="h-full w-full object-cover" />
                 </div>
               </div>
 
@@ -112,12 +112,12 @@ Passionate about writing clean, maintainable code and continuously learning mode
                 },
                 {
                   icon: Linkedin,
-                  href: "http://www.linkedin.com/in/baktha-pragalathan-100350287",
+                  href: "https://www.linkedin.com/in/baktha-pragalathan-100350287/",
                   label: "LinkedIn",
                 },
                 {
                   icon: Mail,
-                  href: "bakthapragalathan22@gmail.com",
+                  href: "mailto:bakthapragalathan22@gmail.com",
                   label: "Email",
                 },
               ].map(({ icon: Icon, href, label }) => (

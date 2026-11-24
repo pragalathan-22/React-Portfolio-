@@ -31,8 +31,9 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`);
+    window.location.href = `mailto:bakthapragalathan22@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -47,7 +48,7 @@ export function Contact() {
       icon: Mail,
       label: 'Email',
       value: 'bakthapragalathan22@gmail.com',
-      href: 'bakthapragalathan22@gmail.com',
+      href: 'mailto:bakthapragalathan22@gmail.com',
     },
     {
       icon: Phone,
@@ -65,7 +66,7 @@ export function Contact() {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/pragalathan-22', label: 'GitHub' },
-    { icon: Linkedin, href: 'http://www.linkedin.com/in/baktha-pragalathan-100350287', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/baktha-pragalathan-100350287/', label: 'LinkedIn' },
   ];
 
   return (

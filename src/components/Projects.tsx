@@ -1,80 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
-import { Github } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 const projectsData = [
-  {
-    title: "Home Service Application",
-    description:
-      "On-demand home service mobile application enabling users to book services such as electrical, plumbing, and maintenance. Includes real-time booking, service status tracking, and secure authentication.",
-    technologies: ["React Native", "Node.js", "Firebase"],
-    image: "🏠",
-    github: "https://github.com/pragalathan-22/Home-Service.git",
-    demo: "#",
-  },
-  {
-    title: "Saloon Booking Application",
-    description:
-      "Mobile booking platform for saloons allowing users to schedule appointments, select services, and manage bookings. Includes admin and user roles with real-time updates.",
-    technologies: ["React Native", "Node.js", "Firebase"],
-    image: "💇‍♂️",
-    github: "https://github.com/pragalathan-22/Saloon-Booking.git",
-    demo: "#",
-  },
-  {
-    title: "Cooper Build Application",
-    description:
-      "Cross-platform web and mobile application developed for construction management, featuring project tracking, user management, and responsive dashboards.",
-    technologies: ["Next.js", "React Native", "Web & Mobile"],
-    image: "🏗️",
-    github: "https://github.com/pragalathan-22/Build.git",
-    demo: "#",
-  },
-  {
-    title: "Recipe Application",
-    description:
-      "Full-stack recipe management application supporting web and mobile platforms. Users can browse, add, and manage recipes with secure API integration.",
-    technologies: ["Python", "Django REST Framework", "React Native", "Web & Mobile"],
-    image: "🍲",
-    github: "https://github.com/pragalathan-22/Racepie_frontend.git",
-    demo: "#",
-  },
-  {
-    title: "IoT Door Unlock System (Password-Based)",
-    description:
-      "IoT-based door unlocking system using a password authentication mechanism with LCD display. Integrated hardware with backend logic for secure access control.",
-    technologies: ["C++", "Arduino", "ESP32", "IoT"],
-    image: "🔐",
-    github: "https://github.com/pragalathan-22/Multiple-Solenoid.git",
-    demo: "#",
-  },
-  {
-    title: "Fingerprint Door Unlock System",
-    description:
-      "Biometric-based door access system utilizing fingerprint authentication for enhanced security. Implemented hardware-level integration and real-time validation.",
-    technologies: ["C++", "Arduino", "Fingerprint Sensor", "IoT"],
-    image: "🆔",
-    github: "https://github.com/pragalathan-22/Sodium-lock.git",
-    demo: "#",
-  },
-    {
-    title: "CRM System with WhatsApp Meta API",
-    description:
-      "Customer Relationship Management (CRM) system built using the MERN stack with WhatsApp Meta API integration for automated messaging, contact management, and message status tracking.",
-    technologies: ["MongoDB", "Express.js", "React", "Node.js", "WhatsApp Meta API"],
-    image: "📊",
-    github: "https://github.com/pragalathan-22/CRM_Application.git",
-    demo: "#",
-  },
-  {
-    title: "HRM System",
-    description:
-      "Human Resource Management (HRM) application with employee management, attendance tracking, and role-based access, utilizing Redux for global state management.",
-    technologies: ["React", "Redux Toolkit", "Node.js", "MongoDB"],
-    image: "👥",
-    github: "https://github.com/pragalathan-22/HRM-Redux.git",
-    demo: "#",
-  },
+  { title: "Pixlspace.in - Printing Kiosk", description: "A self-service printing kiosk experience designed to make document and photo printing simple, quick, and accessible.", technologies: ["Printing kiosk", "Web", "User experience"], image: "P", github: "https://github.com/pragalathan-22", demo: "https://pixlspace.in" },
+  { title: "Anjok Technologies - Company Website", description: "A polished company website presenting Anjok Technologies, its services, and its work to prospective clients.", technologies: ["Company website", "Responsive design", "Web"], image: "A", github: "https://github.com/pragalathan-22", demo: "https://anjoktechnologies.in" },
+  { title: "Kiosk Standee Advertisement", description: "A digital advertising concept for kiosk standees, designed to capture attention and communicate promotions at a glance.", technologies: ["Digital signage", "Kiosk", "Advertising"], image: "S", github: "https://github.com/pragalathan-22", demo: "#contact" },
+  { title: "KFC Touch Billing Kiosk", description: "A touchscreen self-order and billing flow built to help customers browse a menu, place an order, and move through checkout.", technologies: ["Touch kiosk", "Ordering", "Billing"], image: "K", github: "https://github.com/pragalathan-22", demo: "#contact" },
+  { title: "Face Attendance System", description: "A face recognition attendance project built to identify users and streamline attendance recording.", technologies: ["Face recognition", "Attendance", "Automation"], image: "F", github: "https://github.com/pragalathan-22", demo: "#contact" },
 ];
 
 
@@ -166,6 +99,8 @@ export function Projects() {
                     <div className="flex gap-4">
                       <motion.a
                         href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
                         className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-lg hover:bg-purple-500/30 transition-colors"
@@ -173,6 +108,19 @@ export function Projects() {
                         <Github size={18} />
                         <span>Code</span>
                       </motion.a>
+                      {project.demo.startsWith("https://") && (
+                        <motion.a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors"
+                        >
+                          <ExternalLink size={18} />
+                          <span>Visit</span>
+                        </motion.a>
+                      )}
                       {/* <motion.a
                         href={project.demo}
                         whileHover={{ scale: 1.1, rotate: -5 }}
@@ -204,7 +152,7 @@ export function Projects() {
           transition={{ delay: 0.8 }}
           className="text-center text-gray-500 mt-8"
         >
-          ← Scroll horizontally to see more projects →
+          â† Scroll horizontally to see more projects â†’
         </motion.p>
       </div>
     </section>

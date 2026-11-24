@@ -1,104 +1,73 @@
-import { useMemo } from "react";
-import { ParallaxLayer } from "./ParallaxLayer";
-import { Trees } from "./Trees";
+import { useEffect, useRef } from "react";
+export function HeroParallax() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-interface HeroParallaxProps {
-  scrollY: number;
-}
+  useEffect(() => {
+    const section = sectionRef.current;
+    const video = videoRef.current;
+    if (!section || !video) return;
 
-export function HeroParallax({ scrollY }: HeroParallaxProps) {
-  const maxScroll = 2500; // Total scroll distance needed to hide all elements
-  
-  const { scrollProgress, bgOpacity } = useMemo(() => {
-    const progress = Math.min(scrollY / maxScroll, 1);
-    const opacity = progress < 0.95 ? 1 : Math.max(0, 1 - (progress - 0.95) * 20);
-    return { scrollProgress: progress, bgOpacity: opacity };
-  }, [scrollY, maxScroll]);
+    let frame = 0;
+    let targetTime = 0;
+    let active = false;
+
+    const seekToTarget = () => {
+      if (!active || video.seeking || video.readyState < HTMLMediaElement.HAVE_METADATA) return;
+
+      const difference = targetTime - video.currentTime;
+      if (Math.abs(difference) < 0.035) return;
+
+      if (Math.abs(difference) > 0.65 && typeof video.fastSeek === "function") {
+        video.fastSeek(targetTime);
+      } else {
+        video.currentTime = targetTime;
+      }
+    };
+
+    const runSeek = () => {
+      frame = 0;
+      seekToTarget();
+    };
+
+    const updateTarget = () => {
+      const bounds = section.getBoundingClientRect();
+      const travel = section.offsetHeight - window.innerHeight;
+      const progress = travel > 0 ? Math.min(1, Math.max(0, -bounds.top / travel)) : 0;
+      targetTime = progress * (video.duration || 0);
+      active = bounds.bottom > 0 && bounds.top < window.innerHeight;
+      if (active && !frame) frame = requestAnimationFrame(runSeek);
+    };
+
+    video.pause();
+    video.addEventListener("loadedmetadata", updateTarget);
+    video.addEventListener("seeked", runSeek);
+    window.addEventListener("scroll", updateTarget, { passive: true });
+    window.addEventListener("resize", updateTarget);
+    updateTarget();
+
+    return () => {
+      video.removeEventListener("loadedmetadata", updateTarget);
+      video.removeEventListener("seeked", runSeek);
+      window.removeEventListener("scroll", updateTarget);
+      window.removeEventListener("resize", updateTarget);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, []);
 
   return (
-    <>
-      {/* Solid background that covers content below - stays until all layers finish */}
-      <div 
-        className="fixed inset-0 z-0 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, #f7b199, #a8b3c5, #2c3e50, #2c3e50)',
-          opacity: bgOpacity,
-          willChange: 'opacity',
-        }}
-      />
-      
-      <section className="relative w-full overflow-hidden" style={{ height: '400vh' }}>
-        {/* Sky gradient - visible during parallax */}
-        <div className="fixed inset-0 bg-linear-to-b from-[#f7b199] via-[#a8b3c5] to-[#2c3e50] z-0" />
-
-      {/* BACK - First to move and hide */}
-      <ParallaxLayer
-        src="/mountains/Mountain-back.svg.png"
-        scrollY={scrollY}
-        speed={1.2}
-        zIndex={1}
-        baseOpacity={0.4}
-        startAt={0}
-        hideAt={0.15}
-      />
-
-      {/* FAR - Second to move and hide */}
-      <ParallaxLayer
-        src="/mountains/mountain-far.svg.png"
-        scrollY={scrollY}
-        speed={1.2}
-        zIndex={2}
-        baseOpacity={0.6}
-        startAt={0.15}
-        hideAt={0.3}
-      />
-
-      {/* MID - Third to move and hide */}
-      <ParallaxLayer
-        src="/mountains/mountain-mid.svg.png"
-        scrollY={scrollY}
-        speed={1.2}
-        zIndex={3}
-        baseOpacity={1}
-        startAt={0.3}
-        hideAt={0.45}
-      />
-
-      {/* FRONT - Fourth to move and hide */}
-      <ParallaxLayer
-        src="/mountains/mountain-front.svg.png"
-        scrollY={scrollY}
-        speed={1.2}
-        zIndex={4}
-        baseOpacity={1}
-        startAt={0.45}
-        hideAt={0.6}
-      />
-
-      {/* FOREGROUND - Fifth to move and hide */}
-      <ParallaxLayer
-        src="/mountains/mountain-foreground.svg.png"
-        scrollY={scrollY}
-        speed={1.2}
-        zIndex={5}
-        baseOpacity={1}
-        startAt={0.6}
-        hideAt={0.75}
-      />
-
-      {/* TREES - Last to move and hide */}
-      <Trees scrollY={scrollY} maxScroll={maxScroll} startAt={0.75} hideAt={0.9} />
-
-      {/* HERO TEXT */}
-      <div 
-        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none"
-        style={{
-          opacity: 1 - scrollProgress * 1.5,
-        }}
-      >
-
+    <section ref={sectionRef} id="home" className="mountain-scroll-scene">
+      <div className="mountain-scroll-stage">
+        <video
+          ref={videoRef}
+          className="mountain-scroll-video"
+          src="/mountains/mountain.mp4"
+          muted
+          playsInline
+          preload="auto"
+          aria-label="A mountain landscape that moves with the page scroll"
+        />
       </div>
-      </section>
-    </>
+    </section>
   );
 }

@@ -21,13 +21,17 @@ description: [
     title: 'Software Developer',
     company: 'Newtonsky5 Technologies',
     location: 'Mahindra World City, Chennai',
-    period: '2025 - 2026',
+    period: '2025 - Present',
 description: [
-  'Developed and maintained React-based web applications including CRM and HRM systems with role-based access and dashboards',
-  'Built and integrated IoT-based door unlock systems with backend services using Node.js, enabling real-time device control and monitoring',
-  'Deployed, managed, and maintained applications on AWS servers, ensuring scalability, security, and high availability',
-  'Designed and implemented RESTful APIs using Node.js and Express for IoT communication and enterprise applications',
-  'Collaborated with cross-functional teams to deliver responsive UI/UX and reliable end-to-end solutions',
+  'Developed and maintained React-based enterprise applications, including HRM, CRM, and KFC touchscreen ordering applications with billing and order management features',
+  'Designed and developed an interactive 3D Daimler Truck website, showcasing realistic truck models and immersive 3D visual experiences',
+  'Built and deployed printing kiosk applications with automated printing workflows and user-friendly touchscreen interfaces',
+  'Developed IoT-based mobile door lock systems using Node.js, integrating hardware devices for secure, real-time access control and monitoring',
+  'Implemented face recognition-based attendance management systems for automated employee identification and attendance tracking',
+  'Developed an AI-powered virtual dress try-on kiosk with real-time outfit visualization, enabling customers to preview clothing in-store',
+  'Designed and implemented RESTful APIs using Node.js and Express.js for enterprise applications, IoT device communication, and system integrations',
+  'Deployed, managed, and maintained applications on AWS infrastructure, focusing on scalability, security, performance, and availability',
+  'Collaborated with cross-functional teams to deliver responsive user interfaces, interactive applications, and reliable end-to-end solutions'
 ],
   },
 
