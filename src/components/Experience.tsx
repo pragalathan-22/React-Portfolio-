@@ -75,14 +75,14 @@ export function Experience() {
           initial={{ opacity: 0, y: -50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl text-center mb-16 bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
+          className="text-3xl sm:text-4xl text-center mb-10 sm:mb-16 bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
         >
           Experience
         </motion.h2>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-linear-to-b from-purple-500 to-pink-500" />
+          <div className="absolute left-3 sm:left-6 top-0 bottom-0 w-0.5 bg-linear-to-b from-purple-500 to-pink-500" />
 
           <div className="space-y-12">
             {experienceData.map((exp, index) => (
@@ -91,30 +91,31 @@ export function Experience() {
                 initial={{ opacity: 0, x: -100 }}
                 animate={isVisible ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="relative pl-16"
+                className="relative pl-10 sm:pl-16"
               >
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                  className="absolute left-3 top-0 w-6 h-6 rounded-full bg-linear-to-br from-purple-500 to-pink-500 border-4 border-black"
+                  className="absolute left-0 sm:left-3 top-0 w-6 h-6 rounded-full bg-linear-to-br from-purple-500 to-pink-500 border-4 border-black"
                 />
 
                 <motion.div
                   whileHover={{ scale: 1.02, x: 10 }}
-                  className="bg-linear-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-6 hover:border-purple-500/50 transition-all"
+                  className="bg-linear-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-4 sm:p-6 hover:border-purple-500/50 transition-all"
                 >
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-4">
                     <motion.div
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
-                      className="w-12 h-12 rounded-full bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center shrink-0"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center shrink-0"
                     >
-                      <Briefcase size={24} />
+                      <Briefcase size={20} className="sm:hidden" />
+                      <Briefcase size={24} className="hidden sm:block" />
                     </motion.div>
 
                     <div className="flex-1">
-                      <h3 className="text-2xl text-purple-300 mb-1">{exp.title}</h3>
-                      <p className="text-xl text-gray-300 mb-2">{exp.company}</p>
+                      <h3 className="text-xl sm:text-2xl leading-snug text-purple-300 mb-1">{exp.title}</h3>
+                      <p className="text-base sm:text-xl text-gray-300 mb-2">{exp.company}</p>
                       
                       <div className="flex flex-wrap gap-4 text-gray-400">
                         <div className="flex items-center gap-2">

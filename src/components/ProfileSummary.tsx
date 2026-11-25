@@ -39,7 +39,7 @@ export function ProfileSummary() {
               transition={{ type: "spring", stiffness: 300 }}
               className="relative"
             >
-              <div className="w-72 h-72 rounded-full bg-linear-to-br from-purple-500 to-pink-500 p-1">
+              <div className="w-56 h-56 sm:w-72 sm:h-72 rounded-full bg-linear-to-br from-purple-500 to-pink-500 p-1">
                 <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
                   {/* Replace emoji with image if needed */}
                   <img src="/mountains/Author.png" alt="Baktha Pragalathan" className="h-full w-full object-cover" />

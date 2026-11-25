@@ -82,7 +82,7 @@ export function Contact() {
           initial={{ opacity: 0, y: -50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl text-center mb-16 bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
+          className="text-3xl sm:text-4xl text-center mb-10 sm:mb-16 bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
         >
           Get In Touch
         </motion.h2>
@@ -121,9 +121,9 @@ export function Contact() {
                   >
                     <info.icon size={20} />
                   </motion.div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-sm text-gray-500">{info.label}</p>
-                    <p className="text-gray-300">{info.value}</p>
+                    <p className="text-gray-300 break-words">{info.value}</p>
                   </div>
                 </motion.a>
               ))}

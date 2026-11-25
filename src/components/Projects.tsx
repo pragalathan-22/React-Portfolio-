@@ -131,7 +131,7 @@ export function Projects() {
           initial={{ opacity: 0, y: -50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl text-center mb-16 bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
+          className="text-3xl sm:text-4xl text-center mb-10 sm:mb-16 bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
         >
           Projects
         </motion.h2>
@@ -152,7 +152,7 @@ export function Projects() {
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="w-96 shrink-0"
+                className="w-[min(20rem,calc(100vw-3rem))] sm:w-96 shrink-0"
               >
                 <div className="bg-linear-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-lg overflow-hidden hover:border-purple-500/50 transition-all h-full">
                   {/* Project Image/Icon */}

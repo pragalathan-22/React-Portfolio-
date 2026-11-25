@@ -51,7 +51,7 @@ export function Education() {
           initial={{ opacity: 0, y: -50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl text-center mb-16 bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
+          className="text-3xl sm:text-4xl text-center mb-10 sm:mb-16 bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
         >
           Education
         </motion.h2>
@@ -66,19 +66,20 @@ export function Education() {
               whileHover={{ scale: 1.02, x: 10 }}
               className="relative"
             >
-              <div className="bg-linear-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-6 hover:border-purple-500/50 transition-all">
-                <div className="flex items-start gap-4">
+              <div className="bg-linear-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-4 sm:p-6 hover:border-purple-500/50 transition-all">
+                <div className="flex items-start gap-3 sm:gap-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-full bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center shrink-0"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center shrink-0"
                   >
-                    <GraduationCap size={24} />
+                    <GraduationCap size={20} className="sm:hidden" />
+                    <GraduationCap size={24} className="hidden sm:block" />
                   </motion.div>
 
                   <div className="flex-1">
-                    <h3 className="text-2xl text-purple-300 mb-1">{edu.degree}</h3>
-                    <p className="text-xl text-gray-300 mb-2">{edu.institution}</p>
+                    <h3 className="text-lg sm:text-2xl leading-snug text-purple-300 mb-1 break-words">{edu.degree}</h3>
+                    <p className="text-base sm:text-xl text-gray-300 mb-2">{edu.institution}</p>
                     
                     <div className="flex items-center gap-2 text-gray-400 mb-3">
                       <Calendar size={16} />

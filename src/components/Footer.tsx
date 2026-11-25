@@ -46,11 +46,11 @@ export function Footer() {
             <p className="text-gray-400 text-sm mb-4">
               Subscribe to get notified about new projects and updates.
             </p>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-4 py-2 bg-gray-900/50 border border-purple-500/20 rounded-lg focus:border-purple-500/50 focus:outline-none text-white text-sm"
+                className="min-w-0 flex-1 px-4 py-2 bg-gray-900/50 border border-purple-500/20 rounded-lg focus:border-purple-500/50 focus:outline-none text-white text-sm"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -70,7 +70,7 @@ export function Footer() {
  © {new Date().getFullYear()}
           </p>
 
-          <div className="flex gap-6 text-sm text-gray-500">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
             <motion.a
               href="#"
               whileHover={{ color: '#a855f7' }}
