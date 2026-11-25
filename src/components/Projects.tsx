@@ -2,13 +2,100 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from 'lucide-react';
 
+
 const projectsData = [
-  { title: "Pixlspace.in - Printing Kiosk", description: "A self-service printing kiosk experience designed to make document and photo printing simple, quick, and accessible.", technologies: ["Printing kiosk", "Web", "User experience"], image: "P", github: "https://github.com/pragalathan-22", demo: "https://pixlspace.in" },
-  { title: "Anjok Technologies - Company Website", description: "A polished company website presenting Anjok Technologies, its services, and its work to prospective clients.", technologies: ["Company website", "Responsive design", "Web"], image: "A", github: "https://github.com/pragalathan-22", demo: "https://anjoktechnologies.in" },
-  { title: "Kiosk Standee Advertisement", description: "A digital advertising concept for kiosk standees, designed to capture attention and communicate promotions at a glance.", technologies: ["Digital signage", "Kiosk", "Advertising"], image: "S", github: "https://github.com/pragalathan-22", demo: "#contact" },
-  { title: "KFC Touch Billing Kiosk", description: "A touchscreen self-order and billing flow built to help customers browse a menu, place an order, and move through checkout.", technologies: ["Touch kiosk", "Ordering", "Billing"], image: "K", github: "https://github.com/pragalathan-22", demo: "#contact" },
-  { title: "Face Attendance System", description: "A face recognition attendance project built to identify users and streamline attendance recording.", technologies: ["Face recognition", "Attendance", "Automation"], image: "F", github: "https://github.com/pragalathan-22", demo: "#contact" },
+  {
+    title: "Pixlspace.in - Printing Kiosk",
+    description:
+      "Developed a self-service printing kiosk application with an interactive touchscreen interface, allowing users to upload documents, select printing options, preview files, and complete printing operations through an automated workflow.",
+    technologies: ["React.js", "Node.js", "Touchscreen Kiosk", "Printing Automation"],
+    image: "P",
+    github: "https://github.com/pragalathan-22",
+    demo: "https://pixlspace.in",
+  },
+  {
+    title: "Anjok Technologies - Company Website",
+    description:
+      "Designed and developed a professional, responsive company website showcasing business services, company information, projects, and digital solutions with a modern user interface.",
+    technologies: ["React.js", "JavaScript", "Responsive Design", "Web Development"],
+    image: "A",
+    github: "https://github.com/pragalathan-22",
+    demo: "https://anjoktechnologies.in",
+  },
+  {
+    title: "Kiosk Standee Advertisement",
+    description:
+      "Developed a digital advertising solution for touchscreen kiosk standees, featuring promotional content, interactive displays, and engaging visual experiences for customer-facing environments.",
+    technologies: ["React.js", "Digital Signage", "Touchscreen Kiosk", "UI/UX"],
+    image: "S",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "KFC Touchscreen Billing & Ordering Kiosk",
+    description:
+      "Developed a self-service restaurant ordering and billing kiosk with an interactive touchscreen interface, enabling customers to browse food menus, customize orders, manage cart items, and complete the ordering process through a streamlined billing workflow.",
+    technologies: ["React.js", "Node.js", "Touchscreen UI", "Billing System", "REST API"],
+    image: "K",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "IoT Smart Mobile Charging Station",
+    description:
+      "Developed an IoT-enabled mobile charging station with password-protected solenoid door locks. Users select a charging port, create and confirm a password to unlock the compartment, place their mobile phone inside, and close the door. To retrieve the phone, users select the same port and enter their password again to unlock it. Integrated Arduino, ESP32, relay modules, and a Django/Node.js backend for real-time device control, session tracking, and access management.",
+    technologies: ["Arduino", "ESP32", "Node.js", "Django REST API", "React Native", "IoT", "Solenoid Locks"],
+    image: "I",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "Daimler 3D Interactive Truck Website",
+    description:
+      "Developed an immersive 3D truck visualization website featuring interactive 3D truck rotation, clickable vehicle components, highlighted truck parts, and detailed feature information for each selected component. Also incorporated interactive viewer experiences and gaming-style options to make vehicle exploration more engaging.",
+    technologies: ["React.js", "Three.js", "JavaScript", "GSAP", "3D Visualization", "WebGL"],
+    image: "D",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "Face Recognition Attendance System",
+    description:
+      "Developed a face recognition-based attendance management system to automatically identify individuals, record attendance, and maintain attendance history with date and time tracking.",
+    technologies: ["Python", "Face Recognition", "Django", "REST API", "Database"],
+    image: "F",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "Ration Distribution Management Application",
+    description:
+      "Developed a digital ration management application to manage beneficiary information, ration distribution records, inventory details, and distribution tracking through an organized application workflow.",
+    technologies: ["React Native", "Zoho Creator", "Database", "Workflow Automation"],
+    image: "R",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "Recipe Management Application",
+    description:
+      "Developed a recipe application that allows users to explore recipes, browse food categories, view ingredients, and follow step-by-step cooking instructions through an intuitive interface.",
+    technologies: ["React Native", "Node.js", "REST API", "MongoDB"],
+    image: "C",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "School Management & WhatsApp Bulk Messaging",
+    description:
+      "Developed a school management solution with student information management and WhatsApp integration for sending bulk messages, announcements, notifications, and important school updates to parents and students.",
+    technologies: ["React.js", "Node.js", "MongoDB", "WhatsApp API", "REST API"],
+    image: "E",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
 ];
+
 
 
 export function Projects() {

@@ -84,18 +84,35 @@ export function ProfileSummary() {
               <span>chengalpattu</span>
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.8 }}
-              className="text-gray-300 leading-relaxed"
-            >
-              Full-Stack Software Developer with 2+ years of experience in building scalable web applications using Python (Django) and the MERN stack.
-Strong expertise in developing RESTful APIs, secure authentication systems, and responsive user interfaces.
-Experienced in end-to-end application development, from database design to deployment.
-Adept at solving complex problems and translating business requirements into efficient technical solutions.
-Passionate about writing clean, maintainable code and continuously learning modern technologies.
-            </motion.p>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={isVisible ? { opacity: 1, y: 0 } : {}}
+  transition={{ delay: 0.8 }}
+  className="text-gray-300 leading-relaxed space-y-4"
+>
+  <p>
+    Software Developer with 2+ years of hands-on experience in designing,
+    developing, and deploying real-world software applications. Experienced
+    in building web applications using React.js, Node.js, Python (Django),
+    and the MERN stack, along with RESTful API development and database management.
+  </p>
+
+  <p>
+    Skilled in developing diverse solutions, including CRM and HRM systems,
+    IoT-based smart door lock and access control systems, and touchscreen-based
+    self-service kiosk applications with restaurant-style billing and order
+    management functionality. Experienced in hardware-software integration
+    using Arduino and ESP32, enabling real-time device communication and automation.
+  </p>
+
+  <p>
+    Proficient in cloud deployment, server management, and application hosting
+    using AWS and Hostinger. Strong understanding of end-to-end software
+    development, troubleshooting, system integration, and building scalable,
+    secure, and user-friendly applications. Passionate about developing
+    innovative technology solutions that solve real-world business challenges.
+  </p>
+</motion.div>
 
             {/* SOCIAL LINKS */}
             <motion.div

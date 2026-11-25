@@ -32,7 +32,9 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent(formData.subject);
-    const body = encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nDescription:\n${formData.message}`
+    );
     window.location.href = `mailto:bakthapragalathan22@gmail.com?subject=${subject}&body=${body}`;
   };
 
@@ -219,7 +221,7 @@ export function Contact() {
                 transition={{ delay: 0.5 }}
               >
                 <label htmlFor="message" className="block text-gray-300 mb-2">
-                  Message
+                  Description
                 </label>
                 <textarea
                   id="message"
@@ -229,7 +231,7 @@ export function Contact() {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-gray-900/50 border border-purple-500/20 rounded-lg focus:border-purple-500/50 focus:outline-none text-white transition-all resize-none"
-                  placeholder="Your message..."
+                  placeholder="Describe how I can help..."
                 />
               </motion.div>
 

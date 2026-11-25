@@ -28,7 +28,7 @@ const skillsData = [
     category: 'Database',
     icon: Database,
     skills: [
-      { name: 'PostgreSQL', level: 78 },
+      { name: 'PostgreSQL', level: 48 },
       { name: 'MongoDB', level: 75 },
       { name: 'Firebase', level: 75 },
     ],
