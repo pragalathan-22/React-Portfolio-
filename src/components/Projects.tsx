@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from 'lucide-react';
 
 
+
 const projectsData = [
   {
     title: "Pixlspace.in - Printing Kiosk",
@@ -14,6 +15,78 @@ const projectsData = [
     demo: "https://pixlspace.in",
   },
   {
+    title: "Daimler 3D Interactive Truck Website",
+    description:
+      "Developed an immersive 3D truck visualization website featuring interactive 3D truck rotation, clickable vehicle components, highlighted truck parts, and detailed feature information for each selected component.",
+    technologies: ["React.js", "Three.js", "JavaScript", "GSAP", "3D Visualization", "WebGL"],
+    image: "D",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "KFC Touchscreen Billing & Ordering Kiosk",
+    description:
+      "Developed a self-service restaurant ordering and billing kiosk with an interactive touchscreen interface, enabling customers to browse food menus, customize orders, manage cart items, and complete the ordering process.",
+    technologies: ["React.js", "Node.js", "Touchscreen UI", "Billing System", "REST API"],
+    image: "K",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "IoT Smart Mobile Charging Station",
+    description:
+      "Developed an IoT-enabled mobile charging station with password-protected solenoid door locks. Integrated Arduino, ESP32, relay modules, and backend services for real-time device control, session tracking, and access management.",
+    technologies: ["Arduino", "ESP32", "Node.js", "Django REST API", "React Native", "IoT"],
+    image: "I",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
+    title: "VSignature - E-Commerce Platform",
+    description:
+      "Developed an e-commerce website providing an online shopping experience with product presentation, business information, and a user-friendly interface.",
+    technologies: ["PHP", "Web Development", "E-Commerce", "Responsive Design"],
+    image: "V",
+    github: "https://github.com/pragalathan-22",
+    demo: "https://vsignature.in/",
+  },
+  {
+    title: "Taskro - Task Management Solution",
+    description:
+      "Developed a task management website designed to organize tasks, manage activities, and provide a structured digital workflow for productivity and task tracking.",
+    technologies: ["PHP", "Task Management", "Web Development", "Responsive Design"],
+    image: "T",
+    github: "https://github.com/pragalathan-22",
+    demo: "http://taskro.co.in/",
+  },
+  {
+    title: "One Way Cab - Cab Booking Platform",
+    description:
+      "Developed a one-way cab booking website that provides an online platform for customers to explore cab services and access travel booking information.",
+    technologies: ["PHP", "Cab Booking", "Web Development", "Responsive Design"],
+    image: "C",
+    github: "https://github.com/pragalathan-22",
+    demo: "https://onewaycab.taxi/",
+  },
+  {
+    title: "Urbanrise Madhavaram - Real Estate Website",
+    description:
+      "Developed a real estate project website to showcase property information, project details, and promotional content through a professional online interface.",
+    technologies: ["PHP", "Real Estate", "Web Development", "Responsive Design"],
+    image: "U",
+    github: "https://github.com/pragalathan-22",
+    demo: "https://urbanrisemadhavaram.site/",
+  },
+  {
+    title: "MessageBox - Messaging Solution",
+    description:
+      "Developed a messaging solution website providing a digital interface for communication-related services and messaging functionality.",
+    technologies: ["PHP", "Messaging System", "Web Development", "Responsive Design"],
+    image: "M",
+    github: "https://github.com/pragalathan-22",
+    demo: "http://messagebox.in/parrypare.php",
+  },
+  {
     title: "Anjok Technologies - Company Website",
     description:
       "Designed and developed a professional, responsive company website showcasing business services, company information, projects, and digital solutions with a modern user interface.",
@@ -23,38 +96,29 @@ const projectsData = [
     demo: "https://anjoktechnologies.in",
   },
   {
+    title: "Trinity Global Destination - Education & Travel Website",
+    description:
+      "Developed a global education and travel services website to showcase international education opportunities, travel-related services, and business information.",
+    technologies: ["PHP", "Education Website", "Travel Services", "Responsive Design"],
+    image: "G",
+    github: "https://github.com/pragalathan-22",
+    demo: "https://trinityglobaldestination.com/",
+  },
+  {
+    title: "Texura Vaults - Textile & Business Website",
+    description:
+      "Developed a professional textile and business website to showcase company information, textile-related services, and business offerings through a responsive online platform.",
+    technologies: ["PHP", "Business Website", "Textile Industry", "Responsive Design"],
+    image: "X",
+    github: "https://github.com/pragalathan-22",
+    demo: "https://texuravaults.com/",
+  },
+  {
     title: "Kiosk Standee Advertisement",
     description:
       "Developed a digital advertising solution for touchscreen kiosk standees, featuring promotional content, interactive displays, and engaging visual experiences for customer-facing environments.",
     technologies: ["React.js", "Digital Signage", "Touchscreen Kiosk", "UI/UX"],
     image: "S",
-    github: "https://github.com/pragalathan-22",
-    demo: "#contact",
-  },
-  {
-    title: "KFC Touchscreen Billing & Ordering Kiosk",
-    description:
-      "Developed a self-service restaurant ordering and billing kiosk with an interactive touchscreen interface, enabling customers to browse food menus, customize orders, manage cart items, and complete the ordering process through a streamlined billing workflow.",
-    technologies: ["React.js", "Node.js", "Touchscreen UI", "Billing System", "REST API"],
-    image: "K",
-    github: "https://github.com/pragalathan-22",
-    demo: "#contact",
-  },
-  {
-    title: "IoT Smart Mobile Charging Station",
-    description:
-      "Developed an IoT-enabled mobile charging station with password-protected solenoid door locks. Users select a charging port, create and confirm a password to unlock the compartment, place their mobile phone inside, and close the door. To retrieve the phone, users select the same port and enter their password again to unlock it. Integrated Arduino, ESP32, relay modules, and a Django/Node.js backend for real-time device control, session tracking, and access management.",
-    technologies: ["Arduino", "ESP32", "Node.js", "Django REST API", "React Native", "IoT", "Solenoid Locks"],
-    image: "I",
-    github: "https://github.com/pragalathan-22",
-    demo: "#contact",
-  },
-  {
-    title: "Daimler 3D Interactive Truck Website",
-    description:
-      "Developed an immersive 3D truck visualization website featuring interactive 3D truck rotation, clickable vehicle components, highlighted truck parts, and detailed feature information for each selected component. Also incorporated interactive viewer experiences and gaming-style options to make vehicle exploration more engaging.",
-    technologies: ["React.js", "Three.js", "JavaScript", "GSAP", "3D Visualization", "WebGL"],
-    image: "D",
     github: "https://github.com/pragalathan-22",
     demo: "#contact",
   },
@@ -68,9 +132,18 @@ const projectsData = [
     demo: "#contact",
   },
   {
+    title: "School Management & WhatsApp Bulk Messaging",
+    description:
+      "Developed a school management solution with student information management and WhatsApp integration for sending bulk messages, announcements, notifications, and important school updates.",
+    technologies: ["React.js", "Node.js", "MongoDB", "WhatsApp API", "REST API"],
+    image: "E",
+    github: "https://github.com/pragalathan-22",
+    demo: "#contact",
+  },
+  {
     title: "Ration Distribution Management Application",
     description:
-      "Developed a digital ration management application to manage beneficiary information, ration distribution records, inventory details, and distribution tracking through an organized application workflow.",
+      "Developed a digital ration management application to manage beneficiary information, ration distribution records, inventory details, and distribution tracking.",
     technologies: ["React Native", "Zoho Creator", "Database", "Workflow Automation"],
     image: "R",
     github: "https://github.com/pragalathan-22",
@@ -79,23 +152,13 @@ const projectsData = [
   {
     title: "Recipe Management Application",
     description:
-      "Developed a recipe application that allows users to explore recipes, browse food categories, view ingredients, and follow step-by-step cooking instructions through an intuitive interface.",
+      "Developed a recipe application that allows users to explore recipes, browse food categories, view ingredients, and follow step-by-step cooking instructions.",
     technologies: ["React Native", "Node.js", "REST API", "MongoDB"],
     image: "C",
     github: "https://github.com/pragalathan-22",
     demo: "#contact",
   },
-  {
-    title: "School Management & WhatsApp Bulk Messaging",
-    description:
-      "Developed a school management solution with student information management and WhatsApp integration for sending bulk messages, announcements, notifications, and important school updates to parents and students.",
-    technologies: ["React.js", "Node.js", "MongoDB", "WhatsApp API", "REST API"],
-    image: "E",
-    github: "https://github.com/pragalathan-22",
-    demo: "#contact",
-  },
 ];
-
 
 
 export function Projects() {

@@ -11,7 +11,6 @@ const skillsData = [
       { name: 'TypeScript', level: 50 },
       { name: 'Tailwind CSS', level: 62 },
       { name: 'Next.js', level: 65 },
-      { name: 'Vue.js', level: 40 },
     ],
   },
   {
@@ -21,14 +20,15 @@ const skillsData = [
       { name: 'Node.js', level: 80 },
       { name: 'Python', level: 85 },
       { name: 'Express', level: 75 },
-      { name: 'REST APIs', level: 82 },
+      { name: 'REST APIs', level: 70 },
+      { name: 'PHP', level: 70 },
     ],
   },
   {
     category: 'Database',
     icon: Database,
     skills: [
-      { name: 'PostgreSQL', level: 48 },
+      { name: 'SQL', level: 68 },
       { name: 'MongoDB', level: 75 },
       { name: 'Firebase', level: 75 },
     ],
@@ -37,7 +37,7 @@ const skillsData = [
     category: 'Cloud & DevOps',
     icon: Cloud,
     skills: [
-      { name: 'AWS', level: 75 },
+      { name: 'AWS', level: 65 },
       { name: 'Docker', level: 62 },
       { name: 'Vercel', level: 70 },
     ],
@@ -46,7 +46,7 @@ const skillsData = [
     category: 'Design',
     icon: Palette,
     skills: [
-      { name: 'Figma', level: 75 },
+      { name: 'Figma', level: 55 },
       { name: 'UI/UX', level: 60 },
       { name: 'Responsive Design', level: 80 },
     ],
