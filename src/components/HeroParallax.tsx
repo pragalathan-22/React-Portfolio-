@@ -16,13 +16,11 @@ export function HeroParallax() {
       if (!active || video.seeking || video.readyState < HTMLMediaElement.HAVE_METADATA) return;
 
       const difference = targetTime - video.currentTime;
-      if (Math.abs(difference) < 0.035) return;
+      if (Math.abs(difference) < 0.015) return;
 
-      if (Math.abs(difference) > 0.65 && typeof video.fastSeek === "function") {
-        video.fastSeek(targetTime);
-      } else {
-        video.currentTime = targetTime;
-      }
+      // fastSeek snaps to nearby keyframes. Precise seeking keeps the scroll
+      // scrub from visibly jumping between frames on quick scrolls.
+      video.currentTime = targetTime;
     };
 
     const runSeek = () => {

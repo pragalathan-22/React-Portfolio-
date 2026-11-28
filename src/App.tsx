@@ -8,6 +8,7 @@ import { Skills } from "./components/Skills";
 import { Certificates } from "./components/Certificates";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { GhostCursor } from "./components/GhostCursor";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Contact />
         <Footer />
       </main>
+      <GhostCursor />
     </div>
   );
 }
