@@ -163,7 +163,7 @@ export function GhostCursor() {
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     gl.uniform1i(uniforms.u_texture, 0);
 
-    const size = 0.1;
+    const size = window.matchMedia("(max-width: 640px)").matches ? 0.025 : 0.1;
     const count = 25;
     const points: TrailPoint[] = [];
     let x = window.innerWidth * 0.25;
